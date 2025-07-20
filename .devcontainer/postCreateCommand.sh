@@ -3,6 +3,7 @@
 set -euo pipefail
 
 sed -i "s/\$config\['index_page'\] = 'index.php';/\$config\['index_page'\] = '';/g" /var/www/html/install/config/config.php
+cp htaccess.sample .htaccess
 
 chown -R vscode:www-data /var/www/html/
 chmod -R g+rw /var/www/html/application/cache/
